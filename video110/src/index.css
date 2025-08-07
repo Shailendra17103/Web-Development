@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Customize root variables if needed */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optional: Link styles */
+a {
+  @apply font-medium text-indigo-400 no-underline;
+}
+a:hover {
+  @apply text-indigo-500;
+}
+
+/* Base layout using Tailwind utilities */
+body {
+  @apply m-0 flex items-center justify-center min-w-[320px] min-h-screen bg-neutral-900 text-white;
+}
+
+/* Heading style */
+h1 {
+  @apply text-5xl leading-tight font-bold;
+}
+
+/* Remove default button style — use Tailwind in JSX instead */
+button {
+  @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium bg-gray-800 hover:border-indigo-400 transition-colors;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Light mode overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    @apply text-indigo-400;
+  }
+
+  button {
+    @apply bg-gray-100 text-black;
+  }
+}
