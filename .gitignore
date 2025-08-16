@@ -1,0 +1,10 @@
+# Ignore node modules
+node_modules/
+
+# Ignore OS and log files
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore all exe files by default (we will track only needed ones via LFS)
+*.exe
